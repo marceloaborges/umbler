@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+
+	<h1><%= title %></h1>
+	<p>
+		Preencha os dados abaixo para salvar o cliente.
+	</p>
+	<form action="/new" method="POST" accept-charset="utf-8">
+		<p>
+			<label for="nome">Nome: 
+				<input type="text" name="nome">
+			</label>
+		</p>
+		<p>
+			<label for="idade">Idade: 
+				<input type="number" name="idade">
+			</label>
+		</p>
+		<p>
+			<label for="uf">UF: 
+				<select name="uf">
+					<option value="null"></option>
+					<option value="RS">RS</option>
+					<option value="SC">SC</option>
+					<option value="SP">SP</option>
+				</select>
+			</label>
+		</p>
+		<p>
+			<a href="/">Cancelar </a> | <input type="submit" value="Salvar">
+		</p>
+	</form>
+	
+</body>
+</html>
