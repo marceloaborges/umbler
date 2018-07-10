@@ -4,6 +4,7 @@ mongoClient.connect("mongodb://localhost/workshop")
 	.then(conn => global.conn = conn.db("workshop"))
 	.catch(err => console.log('err'))
 
+const ObjectId = require("mongodb").ObjectId;
 
 function findALL(callback){
 	global.conn.collection('customers').find({}).toArray(callback);

@@ -9,5 +9,20 @@ router.get('/', function(req, res, next) {
 	})
 });
 
+/*
+	OUTRO modelo para abrir uma rota
+	POST new 
+*/
+/* router.post('/new', function (req, res, next) {
+	const nome = req.body.nome;
+	const idade = parseInt(req.body.idade);
+	const uf = req.body.uf;
+	global.db.insert({ nome, idade, uf }, (err, result) => {
+		if (err) { return console.log(err); }
+		res.redirect('/');
+	})
+}); */
+
+
 
 module.exports = router;
