@@ -1,3 +1,5 @@
+//Tutorial api node e mysql
+
 const mysql = require('mysql');
 const minhaConnection = mysql.createConnection({
     host: 'localhost',
