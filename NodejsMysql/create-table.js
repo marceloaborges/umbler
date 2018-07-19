@@ -4,7 +4,7 @@ const mysql = require('mysql');
 const minhaConnection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
-    user: 'admin',
+    user: 'root',
     password: 'Saadmin',
     database: 'workshop'
 });
@@ -12,7 +12,7 @@ const minhaConnection = mysql.createConnection({
 minhaConnection.connect(function (err) {
     if (err) return console.log(err);
     console.log('conectou!');
-    createTable(minhaConnection);
+    //createTable(minhaConnection);
     
 })
 
@@ -31,6 +31,8 @@ function createTable(conn) {
         addRows(conn);
     });
 }
+
+
 function addRows(conn) {
     const sql = "INSERT INTO Clientes(Nome,CPF) VALUES ?";
     const values = [
