@@ -44,7 +44,7 @@ function execSQLQuery(sqlQry, res){
     const minhaConexao = mysql.createConnection({
         host: 'localhost',
         port: 3306,
-        user: 'root',
+        user: 'admin',
         password: 'Saadmin',
         database: 'workshop'
     });
